@@ -1,0 +1,22 @@
+[ 
+{
+  "id": 1,
+  "degree": "Bachelor of Technology",
+  "university": "Indira Gandhi Delhi Technical University for Women",
+  "timePeriod": "July 2023  - May 2027",
+  "img": "images/pick.png"
+},
+{
+  "id": 2,
+  "degree": "All India Senior School Examination",
+  "university": "Adarsh Jain Dharmic Shiksha Sadan",
+  "timePeriod": "July 2020 - May 2022",
+  "img": "images/pick.png"
+},
+{
+  "id": 3,
+  "degree": "All India Secondary School Examination ",
+  "university": "St. Francis School ",
+  "timePeriod": "August 2007 - May 2020",
+  "img": "images/pick.png"
+}]

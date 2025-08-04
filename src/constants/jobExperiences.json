@@ -1,0 +1,18 @@
+[
+  {
+    "id": "0",
+    "title": "Full Stack Developer",
+    "company": "IGDTUW",
+    "description": "A full-stack blood donation and availability platform built with Node.js, Express, EJS, Tailwind CSS, and MongoDB",
+    "timePeriod": "May 2025 - July 2025",
+    "img": "images/reach.png"
+  },
+  {
+    "id": "1",
+    "title": "Web  Developer",
+    "company": "Internshala",
+    "description": "Built 3+ scalable projects — Pglife being my major one — and picked up strong skills in web development along the way.",
+    "timePeriod": "May 2024 - July 2024",
+    "img": "images/ibg.png"
+  }
+]

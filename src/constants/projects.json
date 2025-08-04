@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "Blockedu",
+    "description": "Blockedu is an AI-powered blockchain learning hub built with the MERN stack and Tailwind CSS, deployed on Vercel. It integrates the Gaia AI chatbot for real-time support, simplifying blockchain learning. The platform offers curated resources—YouTube videos, documentation, and Ethereum smart contract templates—within a clean, intuitive UI that improved user engagement by 30%.",
+    "thumbnail": "projects/blockedu.png",
+    "deployed": "https://blockeu-3.vercel.app",
+    "github": "https://github.com/Roshians/Blockeu",
+    "date": "September 2024"
+  },
+  {
+    "id": "2",
+    "title": "GigCred",
+    "description": "GigCred is a credit scoring platform designed for freelancers, aimed at improving financial inclusion. It features a custom-built verification system to authenticate work history and skills across gig platforms. This system boosted loan eligibility accuracy by 35%, reduced default risk by 20%, and helped over 1,000 freelancers gain access to fair credit opportunities.",
+    "thumbnail": "projects/gigcred.png",
+    "github": "https://github.com/yashi2606/Fintech",
+    "deployed": "https://drive.google.com/file/d/134y6Tzn9g9kIh4kZc2x4Nwpuhp-2Va0j/view?usp=sharing",
+    "date": "April 2025"
+  },
+  {
+    "id": "3",
+    "title": "LifeLink",
+    "description": "LifeLink is a full-stack blood donation platform built with Node.js, MongoDB, and EJS, designed to support 1,000+ concurrent users and reduce emergency donor search time by up to 80%. The system includes simulated flows with over 200 mock records to test database performance and optimize real-time donor-request matching under realistic conditions.",
+    "thumbnail": "projects/blooc.png",
+    "github": "https://github.com/Swatii-21/LIFE-LINK",
+    "deployed": "https://jeevan7.netlify.app/",
+    "date": "May 2025"
+  },
+  {
+    "id": "4",
+    "title": " Portfolio",
+    "description": "A  portfolio website crafted to showcase projects, skills, and contact info in a responsive and interactive layout using modern frontend tools like React and Tailwind CSS.",
+    "thumbnail": "projects/porty.png",
+    "github": "https://github.com/missatrox44/portfolio",
+    "deployed": "https://missatrox44.github.io/portfolio/",
+    "date": " July 2025"
+  }
+]
