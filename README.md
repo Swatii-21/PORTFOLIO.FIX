@@ -4,16 +4,7 @@ Welcome to the Vite Portfolio repository, a project that showcases my profession
 
  
 
- 
-
 Hosted on [Vercel](https://vercel.com/), known for its performance and scalability, ensuring a smooth experience for every visitor.
-
-
-### 📱 Mobile Optimized
-
-This site has been meticulously designed to ensure an optimal viewing experience across devices. For a quick peek into the mobile navigation, check out this GIF:
-
-![Mobile Navigation GIF](./public/images/portfolio-demo.gif)
 
 ### 🔧 Built With
 
