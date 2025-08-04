@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import { SiPerplexity } from "react-icons/si";
 // import landingImg from "/logo.svg";
-const landingImg = "/public/logo.png"; // <-- Your new image file
+const landingImg = "/logo.png"; // <-- Your new image file
 
 import {
   GITHUB_URL,
