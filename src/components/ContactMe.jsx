@@ -1,15 +1,27 @@
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 9defae5 (Fix: rebuilt git index)
 import React, { useState, useCallback } from "react";
 import emailjs from "@emailjs/browser";
 import { useSpring, animated } from "react-spring";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
+<<<<<<< HEAD
 // fetch environment variables outside the component or can use useEffect to avoid unnecessary computation during re-rendering
+=======
+// fetch environment variables outside the component
+>>>>>>> 9defae5 (Fix: rebuilt git index)
 const serviceId = import.meta.env.VITE_SERVICE;
 const templateId = import.meta.env.VITE_TEMPLATE;
 const apiKey = import.meta.env.VITE_API;
 
+<<<<<<< HEAD
 // extract input tag, keep code DRY and avoid repeated style classes
+=======
+// Reusable input field
+>>>>>>> 9defae5 (Fix: rebuilt git index)
 const InputField = ({ type, name, placeholder, value, onChange }) => (
   <input
     type={type}
@@ -34,6 +46,7 @@ export default function ContactMe() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
 
+<<<<<<< HEAD
   // avoid inline functions in render. define functions outside component using useCallback hook
   const handleNameChange = useCallback((e) => setName(e.target.value), []);
   const handleEmailChange = useCallback((e) => setEmail(e.target.value), []);
@@ -41,18 +54,30 @@ export default function ContactMe() {
     (e) => setMessage(e.target.value),
     []
   );
+=======
+  const handleNameChange = useCallback((e) => setName(e.target.value), []);
+  const handleEmailChange = useCallback((e) => setEmail(e.target.value), []);
+  const handleMessageChange = useCallback((e) => setMessage(e.target.value), []);
+>>>>>>> 9defae5 (Fix: rebuilt git index)
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+<<<<<<< HEAD
     // email input validation
+=======
+    // Basic email format validation
+>>>>>>> 9defae5 (Fix: rebuilt git index)
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(email)) {
       setError("Please enter a valid email address.");
       return;
     }
 
+<<<<<<< HEAD
     // emailjs logic
+=======
+>>>>>>> 9defae5 (Fix: rebuilt git index)
     emailjs.sendForm(serviceId, templateId, e.target, apiKey).then(
       (result) => {
         console.log("result text", result.text);
@@ -65,7 +90,11 @@ export default function ContactMe() {
       (error) => {
         console.log("error", error.text);
         setError(
+<<<<<<< HEAD
           "Oops! It seems the JavaScript deities are having a moody day. Fear not, our digital shaman Sara is on it! If you need to bypass the spiritual realm and chat directly, email her at missatrox44@gmail.com"
+=======
+          "Oops! It seems the JavaScript deities are having a moody day. If you need to bypass the spiritual realm and contact me directly, email me at swatiigdtuwcse@gmail.com"
+>>>>>>> 9defae5 (Fix: rebuilt git index)
         );
         toast.error("Oops! Something went wrong. Please try again later.");
       }
@@ -82,9 +111,16 @@ export default function ContactMe() {
         <h1 className="text-4xl font-bold text-darkDesert mb-6 text-center">
           Contact Me
         </h1>
+<<<<<<< HEAD
         {success ? (
           <div>
             <img src="/thankyou-toast.jpg" alt="Success" class="rounded-3xl" />
+=======
+
+        {success ? (
+          <div>
+            <img src="/thankyou-toast.jpg" alt="Success" className="rounded-3xl" />
+>>>>>>> 9defae5 (Fix: rebuilt git index)
           </div>
         ) : (
           <form onSubmit={handleSubmit}>
@@ -123,5 +159,8 @@ export default function ContactMe() {
     </animated.section>
   );
 }
+<<<<<<< HEAD
 
  
+=======
+>>>>>>> 9defae5 (Fix: rebuilt git index)
