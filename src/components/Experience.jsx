@@ -1,3 +1,4 @@
+ 
 // import React, { useState } from "react";
 // import Modal from "react-modal";
 // import { FaTimesCircle } from "react-icons/fa";
@@ -7,7 +8,6 @@
 // } from "react-vertical-timeline-component";
 // import "react-vertical-timeline-component/style.min.css";
 // import jobExperiences from "../constants/jobExperiences.json";
-// import nonDevExperiences from "../constants/nonDevExperience.json";
 
 // const JobExperienceCard = ({ experience, onClick }) => (
 //   <VerticalTimelineElement
@@ -21,53 +21,8 @@
 //     contentStyle={{ position: "relative" }}
 //     date={<span className="text-darkDesert">{experience.timePeriod}</span>}
 //   >
-//     {/* <img
-//       src={experience.img}
-//       alt={experience.title}
-//       className=" hidden md:block h-14 w-auto rounded-full absolute top-0 right-0 mt-2 mr-2"
-//     /> */}
 //     <h3 className="text-2xl font-bold text-darkDesert">{experience.title}</h3>
 //     <p className="text-xl text-darkDesert italic mb-4">{experience.company}</p>
-//     {/* <p className="text-darkDesert">{experience.description}</p> */}
-//     <div className="flex justify-between items-center">
-//       <button
-//         className="text-darkDesert font-bold hover:text-goldDesert"
-//         onClick={onClick}
-//       >
-//         Read more...
-//       </button>
-//     </div>
-//   </VerticalTimelineElement>
-// );
-
-// const NonDevExperienceCard = ({ experience, onClick }) => (
-//   <VerticalTimelineElement
-//     icon={
-//       <img
-//         src={experience.img}
-//         alt={experience.title}
-//         className="h-full w-full rounded-full block"
-//       />
-//     }
-//     contentStyle={{ position: "relative" }}
-//     date={<span className="text-darkDesert">{experience.timePeriod}</span>}
-//   >
-//     {/* <div className="items-center">
-//       <img
-//         src={experience.img}
-//         alt={experience.title}
-//         className="
-//         hidden md:block
-//         w-auto 
-//         h-16 sm:h-18 md:h-24 lg:h-28 xl:h-32 
-//         rounded-full
-//         justify-end
-//         absolute right-0  
-//        mr-2"
-//       />
-//     </div> */}
-//     <h3 className="text-2xl font-bold text-darkDesert">{experience.title}</h3>
-//     <p className="text-xl text-darkDesert italic mb-2">{experience.company}</p>
 //     <div className="flex justify-between items-center">
 //       <button
 //         className="text-darkDesert font-bold hover:text-goldDesert"
@@ -88,25 +43,12 @@
 //       className="bg-lightDesert p-8 rounded-lg shadow-lg w-full mx-auto mt-12"
 //     >
 //       <h2 className="text-4xl font-bold text-darkDesert mb-4 text-center">
-//        Developer Experience
+//         Developer Experience
 //       </h2>
 //       <VerticalTimeline>
 //         {jobExperiences.map((experience, index) => (
-//           <JobExperienceCard 
-//           key={index} 
-//           experience={experience}  
-//           onClick={() => setModalContent(experience)}
-//           />
-//         ))}
-//       </VerticalTimeline>
-
-//       <h2 className="text-4xl font-bold text-darkDesert mt-6 mb-4 text-center">
-//         Non Dev Experience
-//       </h2>
-//       <VerticalTimeline>
-//         {nonDevExperiences.map((experience) => (
-//           <NonDevExperienceCard
-//             key={experience.id}
+//           <JobExperienceCard
+//             key={index}
 //             experience={experience}
 //             onClick={() => setModalContent(experience)}
 //           />
@@ -116,7 +58,7 @@
 //       <Modal
 //         isOpen={!!modalContent}
 //         onRequestClose={() => setModalContent(null)}
-//         className="fixed inset-0 z-50 flex items-center justify-center p-6 "
+//         className="fixed inset-0 z-50 flex items-center justify-center p-6"
 //         overlayClassName="bg-black bg-opacity-50 transition-opacity duration-500 ease-out"
 //       >
 //         <div className="bg-white p-6 rounded-lg shadow-2xl transform transition-transform duration-500 ease-out space-y-4 md:space-y-0 max-w-md max-h-[80vh] overflow-y-auto">
@@ -145,9 +87,10 @@
 // export default Experience;
 
 
+
 import React, { useState } from "react";
 import Modal from "react-modal";
-import { FaTimesCircle } from "react-icons/fa";
+import { FaTimesCircle, FaGithub, FaLinkedin } from "react-icons/fa";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -161,7 +104,7 @@ const JobExperienceCard = ({ experience, onClick }) => (
       <img
         src={experience.img}
         alt={experience.title}
-        className="h-full w-full rounded-full block "
+        className="h-full w-full rounded-full block"
       />
     }
     contentStyle={{ position: "relative" }}
@@ -180,17 +123,38 @@ const JobExperienceCard = ({ experience, onClick }) => (
   </VerticalTimelineElement>
 );
 
+const Footer = () => (
+  <footer className="w-full bg-darkDesert text-white py-4 fixed bottom-0 left-0 z-40 flex flex-col items-center">
+    <span className="text-sm">
+      Made with <span className="text-red-500">❤️</span> by SWATI
+    </span>
+    <div className="flex space-x-4 mt-2">
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+        <FaGithub className="text-white hover:text-goldDesert" size={20} />
+      </a>
+      <a
+        href="https://linkedin.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaLinkedin className="text-white hover:text-goldDesert" size={20} />
+      </a>
+    </div>
+  </footer>
+);
+
 const Experience = () => {
   const [modalContent, setModalContent] = useState(null);
 
   return (
     <div
       id="experience"
-      className="bg-lightDesert p-8 rounded-lg shadow-lg w-full mx-auto mt-12"
+      className="relative min-h-screen bg-lightDesert pt-8 pb-24 px-4 rounded-lg shadow-lg w-full mx-auto mt-12"
     >
       <h2 className="text-4xl font-bold text-darkDesert mb-4 text-center">
         Developer Experience
       </h2>
+
       <VerticalTimeline>
         {jobExperiences.map((experience, index) => (
           <JobExperienceCard
@@ -226,6 +190,8 @@ const Experience = () => {
           </div>
         </div>
       </Modal>
+
+      <Footer />
     </div>
   );
 };
